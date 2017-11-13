@@ -1,0 +1,18 @@
+﻿import "Windows.Foundation.idl";
+
+namespace Component
+{
+    runtimeclass Button;
+
+    [version(1.0), uuid(461c8806-8bc2-4622-8eac-b547c39f867e), exclusiveto(Button)]
+    interface IButton : IInspectable
+    {
+        [propget] HRESULT Text([out,retval] HSTRING* value);
+    };
+
+    [version(1.0), activatable(1.0)]
+    runtimeclass Button
+    {
+        [default] interface IButton;
+    }
+}
