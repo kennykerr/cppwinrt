@@ -1,4 +1,4 @@
-﻿// C++/WinRT v1.0.170906.1
+﻿// C++/WinRT v1.0.171013.2
 // Copyright (c) 2017 Microsoft Corporation. All rights reserved.
 
 #pragma once
@@ -26,7 +26,7 @@ template <> struct default_interface<Component::Button>{ using type = Component:
 template <typename D>
 struct consume_Component_IButton
 {
-    hstring Text() const;
+    hstring Text() const noexcept;
 };
 template <> struct consume<Component::IButton> { template <typename D> using type = consume_Component_IButton<D>; };
 

@@ -32,17 +32,11 @@ namespace
     {
         WINRT_ASSERT(!device);
 
-        UINT flags = D3D11_CREATE_DEVICE_BGRA_SUPPORT;
-
-#ifdef _DEBUG
-        flags |= D3D11_CREATE_DEVICE_DEBUG;
-#endif
-
         return D3D11CreateDevice(
             nullptr,
             type,
             nullptr,
-            flags,
+            D3D11_CREATE_DEVICE_BGRA_SUPPORT,
             nullptr, 0,
             D3D11_SDK_VERSION,
             device.put(),
