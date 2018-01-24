@@ -23,7 +23,7 @@
     <ProjectGuid>{559A7CF4-DC5F-4D62-BA6B-0C2B025593F8}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>FarmAnimals</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17061.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17069.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -92,7 +92,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <CustomBuildStep>
-      <Command>cppwinrt.exe -in $(ProjectDir)Component.winmd -comp $(ProjectDir) -out "$(ProjectDir)Generated Files" -ref 10.0.17061.0 -verbose</Command>
+      <Command>cppwinrt.exe -in $(ProjectDir)Component.winmd -comp $(ProjectDir) -out "$(ProjectDir)Generated Files" -ref 10.0.17069.0 -verbose</Command>
       <Message>C++/WinRT compiler</Message>
       <Outputs>Generated Files\module.g.cpp</Outputs>
       <Inputs>Component.winmd</Inputs>
